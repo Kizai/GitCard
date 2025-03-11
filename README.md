@@ -31,7 +31,7 @@ GitCard 是一个优雅的 GitHub 个人资料卡片和项目卡片生成工具�
 
 1. 克隆仓库：
 ```bash
-git clone https://github.com/yourusername/gitcard.git
+git clone https://github.com/kizai/gitcard.git
 cd gitcard
 ```
 
