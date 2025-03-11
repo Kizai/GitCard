@@ -2,6 +2,8 @@
 
 GitCard 是一个优雅的 GitHub 个人资料卡片和项目卡片生成工具。它能帮助开发者创建精美的卡片来展示他们的 GitHub 个人资料或项目信息，非常适合用于在社交媒体、个人网站或文档中展示。
 
+[English](README_EN.md) | 简体中文
+
 ## ✨ 功能特点
 
 - 🎨 支持多种卡片类型
@@ -56,6 +58,28 @@ npm run dev
 ```
 
 5. 打开浏览器访问 http://localhost:3000
+
+## 🚀 部署到 Vercel
+
+1. 推送代码到 GitHub：
+   - 在 GitHub 上创建新仓库
+   - 将代码推送到仓库
+
+2. 在 Vercel 上部署：
+   - 访问 [Vercel](https://vercel.com)
+   - 使用 GitHub 账号登录
+   - 点击 "Import Project"
+   - 选择 "Import Git Repository"
+   - 选择你的 GitCard 仓库
+   - Vercel 会自动检测到 Next.js 配置
+   - 添加环境变量：
+     - 名称：`NEXT_PUBLIC_GITHUB_TOKEN`
+     - 值：你的 GitHub Token
+   - 点击 "Deploy"
+
+3. 项目将自动部署并在 Vercel URL 上可用
+   - 你可以在 Vercel 项目设置中自定义域名
+   - 之后每次推送到 main 分支都会自动触发部署
 
 ## 💡 使用指南
 
