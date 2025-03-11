@@ -58,7 +58,7 @@ export async function exportToImage(element: HTMLElement, aspectRatio: CardAspec
       skipAutoScale: true,
       style: {
         transform: 'none',
-        'transform-origin': 'center'
+        transformOrigin: 'center'
       }
     });
     
