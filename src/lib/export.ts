@@ -56,9 +56,12 @@ export async function exportToImage(element: HTMLElement, aspectRatio: CardAspec
       quality: 1.0,
       pixelRatio: 2,
       skipAutoScale: true,
-      style: {
-        transform: 'none',
-        transformOrigin: 'center'
+      filter: (node) => {
+        if (node instanceof HTMLElement) {
+          node.style.transform = 'none';
+          node.style.transformOrigin = 'center';
+        }
+        return true;
       }
     });
     
