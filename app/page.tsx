@@ -63,6 +63,16 @@ export default function Home() {
     setData(null); // 清除当前数据
   };
 
+  // 获取 GitHub 链接
+  const getGitHubLink = () => {
+    if (config.type === 'profile') {
+      return `https://github.com/${input}`;
+    } else {
+      const [owner, repo] = input.split('/');
+      return `https://github.com/${owner}/${repo}`;
+    }
+  };
+
   // 初始加载
   if (!data && !error && !isLoading) {
     loadData(input);
@@ -74,7 +84,14 @@ export default function Home() {
         {/* 头部 */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">
-            GitCard
+            <a
+              href="https://github.com/Kizai/GitCard"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-600 transition-colors"
+            >
+              GitCard
+            </a>
           </h1>
           <p className="text-lg text-gray-600 mb-8">
             Create beautiful GitHub cards in seconds
@@ -122,6 +139,16 @@ export default function Home() {
                 {isLoading ? "Loading..." : "Generate"}
               </button>
             </div>
+            {input && !error && (
+              <a
+                href={getGitHubLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-2 text-sm text-blue-500 hover:text-blue-600"
+              >
+                View on GitHub ↗
+              </a>
+            )}
           </form>
         </div>
 
@@ -161,6 +188,21 @@ export default function Home() {
             </div>
           </div>
         )}
+
+        {/* 页脚 */}
+        <footer className="mt-12 text-center text-sm text-gray-500">
+          <p>
+            Made with ❤️ by{" "}
+            <a
+              href="https://github.com/Kizai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-600"
+            >
+              Kizai
+            </a>
+          </p>
+        </footer>
       </div>
     </div>
   );

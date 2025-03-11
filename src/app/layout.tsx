@@ -9,6 +9,26 @@ export const metadata: Metadata = {
   title: "GitCard - GitHub Profile Card Generator",
   description: "Create beautiful, customizable GitHub profile cards",
   keywords: ["GitHub", "Profile", "Card", "Generator", "Developer"],
+  icons: {
+    icon: [
+      { url: "/icons/favicon.svg" },
+    ],
+  },
+  openGraph: {
+    title: "GitCard - GitHub Profile Card Generator",
+    description: "Create beautiful, customizable GitHub profile cards",
+    url: "https://github.com/Kizai/GitCard",
+    siteName: "GitCard",
+    images: [
+      {
+        url: "/icons/favicon.svg",
+        width: 512,
+        height: 512,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
