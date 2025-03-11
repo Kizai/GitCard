@@ -29,7 +29,7 @@ GitCard is an elegant GitHub profile and repository card generator. It helps dev
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/gitcard.git
+git clone https://github.com/kizai/gitcard.git
 cd gitcard
 ```
 
